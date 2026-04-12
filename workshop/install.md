@@ -1,106 +1,80 @@
-# Install OpenClaw For The Workshop
+# Install and First Run
 
-This guide is intentionally narrow. The goal is not to master every OpenClaw surface. The goal is to get from zero to a running local assistant.
+## Prerequisites
 
-## Prereqs
+- Node.js 22.14+ (Node 24 recommended)
+- An API key from a supported provider (Anthropic recommended)
+- macOS, Linux, or Windows via WSL2
 
-- Node.js 24 recommended
-- Node.js 22.14+ supported
-- one model provider API key
+Check with:
 
-Check what you have:
+    node --version
 
-```bash
-./scripts/check-prereqs.sh
-```
+Or run the repo's prereq check:
 
-## Fastest setup
+    ./scripts/check-prereqs.sh
 
-### macOS / Linux
+## Step 1: Install the CLI
 
-```bash
-curl -fsSL https://openclaw.ai/install.sh | bash
-```
+    curl -fsSL https://openclaw.ai/install.sh | bash
 
-### Windows PowerShell
+Windows (PowerShell):
 
-```powershell
-iwr -useb https://openclaw.ai/install.ps1 | iex
-```
+    irm https://openclaw.ai/install.ps1 | iex
 
-## Onboard
+## Step 2: Run onboarding
 
-Run the guided setup:
+    openclaw onboard --install-daemon
 
-```bash
-openclaw onboard --install-daemon
-```
+This walks you through:
+- Model provider and API key (Anthropic, OpenAI, or others)
+- Gateway configuration (port, auth, bind address)
+- Optional channels (Telegram, WhatsApp, Discord)
+- Background daemon install (LaunchAgent on macOS, systemd on Linux)
 
-What onboarding should do:
+Keep token auth enabled. Accept the default port (18789).
 
-- choose a model provider
-- store the needed auth
-- configure the gateway
-- install the gateway daemon so it stays running
+## Step 3: Verify the gateway
 
-## Verify the gateway
+    openclaw gateway status
 
-```bash
-openclaw gateway status
-```
+You should see the gateway running and connected.
 
-You want to see the gateway up and listening on the default port.
+For a deeper check:
 
-## Open the dashboard
+    openclaw status --deep
 
-```bash
-openclaw dashboard
-```
+## Step 4: Open the dashboard
 
-If the Control UI opens, the local control plane is working.
+    openclaw dashboard
 
-## Send the first message
+This opens the Control UI in your browser. If it loads, the gateway is working.
 
-Start in the dashboard UI and send a plain prompt such as:
+## Step 5: Send one message
 
-```text
-Summarize what OpenClaw is in one paragraph and suggest one useful personal workflow for me.
-```
+Type something in the dashboard chat. Get a reply. That's it - you're running.
 
-## Useful follow-up commands
+## Step 6: Connect your phone
 
-```bash
-openclaw health
-openclaw doctor
-```
+Telegram (recommended for the workshop):
 
-Use `health` for basic sanity. Use `doctor` when something feels misconfigured or risky.
+1. Open Telegram, search for @BotFather
+2. Send `/newbot`, follow the prompts, get a bot token
+3. Paste the token when the onboard wizard asks for channels (or run `openclaw configure` to add it after)
+4. Message your bot on Telegram
 
-## Important mental model
+WhatsApp: The onboard wizard shows a QR code. Scan it with WhatsApp on your phone.
 
-- config lives in `~/.openclaw/openclaw.json`
-- workspace lives in `~/.openclaw/workspace`
-- credentials and local state also live under `~/.openclaw/`
+The goal for this workshop: first reply in the dashboard, then on your phone.
 
-That separation is useful because your personal tailoring and state live outside the source repo.
+## Troubleshooting
 
-## If you want to build from source later
+**"command not found" after install**: Restart your terminal or source your shell profile.
 
-```bash
-git clone https://github.com/openclaw/openclaw.git
-cd openclaw
-pnpm install
-pnpm ui:build
-pnpm build
-pnpm openclaw onboard --install-daemon
-```
+**Legacy config detected**: If the onboarding wizard finds an old `openclaw.json`, it will ask you to Keep, Modify, or Reset. Choose Reset for a clean start.
 
-## Workshop fallback plan
+**npm / sharp install failure**: Make sure you're on Node 22.14+ or Node 24. Older versions cause native module build failures.
 
-If live installs go sideways:
+**Gateway won't start on Linux**: The daemon needs `loginctl enable-linger` for your user. The wizard tries this automatically but may need sudo.
 
-1. have one machine already fully working
-2. have one person screen-share a successful onboarding flow
-3. move the rest of the audience to paired follow-up after the talk
-
-The workshop should not fail just because package-manager setup on one laptop is cursed.
+**WhatsApp QR code won't scan**: Use the Telegram channel instead for the workshop. It's faster to set up (just a bot token).

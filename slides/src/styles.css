@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/NotoSerif-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/NotoSerif-Italic-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-text: #e1e1e1;
+  --dark-muted: #888;
+  --warm-bg: #F2EBE0;
+  --warm-headline: #3D1C00;
+  --warm-body: #4a3f35;
+  --warm-muted: #8a7e72;
+  --accent: #c8a882;
+  --accent-hover: #b89a72;
+  --mono: 'DM Mono', 'SF Mono', 'Fira Code', monospace;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --serif: 'Noto Serif', Georgia, serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--sans);
+  letter-spacing: -0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { background: var(--dark-bg); }
