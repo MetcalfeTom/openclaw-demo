@@ -8,7 +8,7 @@ export default function SlideMemory() {
       </div>
 
       <div style={{ fontFamily: 'var(--serif)', fontSize: 28, fontStyle: 'italic', lineHeight: 1.45, maxWidth: 700, marginBottom: 36 }}>
-        The difference between a conversation with amnesia and one that accumulates state across sessions.
+        Start blank and accumulate memories across sessions.
       </div>
 
       <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap' }}>

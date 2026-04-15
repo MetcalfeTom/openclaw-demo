@@ -22,7 +22,7 @@ export default function SlideTitle() {
         </div>
       </div>
       <div style={{ fontFamily: 'var(--sans)', fontSize: 22, color: 'var(--dark-muted)', fontWeight: 400 }}>
-        Product design, and how to use it
+        Its product design, and how to use it
       </div>
     </div>
   )

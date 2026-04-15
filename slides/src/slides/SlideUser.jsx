@@ -27,7 +27,7 @@ Channels: Telegram primary, email secondary`}
       </pre>
 
       <div style={{ marginTop: 28, fontFamily: 'var(--sans)', fontSize: 16, color: 'var(--warm-muted)', lineHeight: 1.6, maxWidth: 520 }}>
-        The agent reads this on every boot. Your timezone, your preferences, your tools. Static context you write once and update occasionally.
+        The agent reads this on every boot. Your timezone, your preferences, your tools.
       </div>
     </div>
   )

@@ -7,12 +7,17 @@ const items = [
   {
     emoji: '📶',
     title: 'Low network, no problem',
-    body: 'Queue messages in Telegram while offline. They execute when your phone has signal again.',
+    body: 'Queue messages in Telegram/WhatsApp while offline. They execute when your phone has signal again.',
   },
   {
     emoji: '📂',
     title: 'A workspace you can see',
     body: 'Everything is markdown files on disk. You can read, search, and version the agent\'s state at any time.',
+  },
+  {
+    emoji: '💬',
+    title: 'Everything gets a voice',
+    body: 'Run one on your home network and you\'re talking to your house. Point one at a website and you can ask it what\'s wrong. Any system becomes a conversation.',
   },
 ]
 
@@ -22,13 +27,13 @@ export default function SlideModels() {
   return (
     <div style={S}>
       <div style={{ fontFamily: 'var(--serif)', fontSize: 40, fontWeight: 700, color: 'var(--warm-headline)', lineHeight: 1.15, marginBottom: 12 }}>
-        Three things I love
+        Four things I love
       </div>
       <div style={{ fontFamily: 'var(--sans)', fontSize: 17, color: 'var(--warm-muted)', marginBottom: 44, maxWidth: 500 }}>
         Personal highlights after living with it daily
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 28, maxWidth: 580 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 22, maxWidth: 580 }}>
         {items.map((t, i) => (
           <div key={i} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
             <div style={{ fontSize: 28, lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{t.emoji}</div>
