@@ -22,8 +22,8 @@ export default function SlideWorkspace() {
         The workspace
       </div>
       <div style={{ fontFamily: 'var(--sans)', fontSize: 18, color: 'var(--warm-muted)', marginBottom: 44, maxWidth: 600 }}>
-        A folder of plain markdown files. No database, no config panel.<br />
-        Change a file, change the agent.
+        A folder of text files. Markdown is just a text file — no database, no config panel.<br />
+        Open it in any editor, change a line, change the agent.
       </div>
 
       <div style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--warm-body)', background: 'rgba(0,0,0,0.04)', borderRadius: 12, padding: '24px 28px', maxWidth: 600 }}>

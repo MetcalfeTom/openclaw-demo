@@ -44,6 +44,7 @@ export default function SlideInstall() {
 
       <div style={{ marginTop: 36, fontFamily: 'var(--sans)', fontSize: 14, color: 'var(--warm-muted)', maxWidth: 480, lineHeight: 1.6 }}>
         Telegram is fastest - create a bot via @BotFather, paste the token during onboard. WhatsApp uses a QR code login.
+        macOS app also available — <code style={{ background: 'rgba(0,0,0,0.05)', padding: '2px 8px', borderRadius: 4, fontSize: 13 }}>brew install openclaw</code> or download from openclaw.ai/download.
       </div>
     </div>
   )

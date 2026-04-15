@@ -1,6 +1,6 @@
 const sections = [
   { num: '01', title: 'The origin story', time: '8 min' },
-  { num: '02', title: 'How it actually works', time: '10 min' },
+  { num: '02', title: 'How it actually works', time: '12 min' },
   { num: '03', title: 'What would you use it for?', time: '10 min' },
   { num: '04', title: 'Safety', time: '12 min' },
   { num: '05', title: 'Getting it running', time: '15 min' },

@@ -28,7 +28,7 @@ export default function SlideSoulQuote() {
         From Steinberger's SOUL.md
       </div>
       <div style={{ marginTop: 32, fontFamily: 'var(--serif)', fontSize: 18, fontStyle: 'italic', color: 'var(--warm-headline)', maxWidth: 500, lineHeight: 1.5 }}>
-        "Peter really crafted a personality that is compelling and interesting, and a lot of current agents don't get this correctly."
+        "Peter [Steinberger] really crafted a personality that is compelling and interesting, and a lot of current agents don't get this correctly."
       </div>
       <div style={{ marginTop: 8, fontFamily: 'var(--sans)', fontSize: 14, color: 'var(--warm-muted)' }}>
         Andrej Karpathy, No Priors

@@ -1,8 +1,8 @@
 const items = [
   'Don\'t install skills you haven\'t read the source of',
   'Start read-only: summarize, draft, classify',
-  'Never put secrets in workspace files',
-  'Update to latest stable release',
+  'Never put passwords, API keys, or tokens in workspace files',
+  'Keep it updated — always run the latest stable release',
 ]
 
 const S = { position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 14%' }

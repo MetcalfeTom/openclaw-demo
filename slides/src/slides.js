@@ -37,22 +37,22 @@ SlideFirstAgent.mode = 'warm'
 SlideClose.mode = 'dark'
 
 export default [
-  SlideTitle,          // 1  [dark]
-  SlideContents,       // 2  [dark]
-  SlideTimeline,       // 3  [warm]
-  SlideQuoteEmployee,  // 4  [dark]
-  SlideWorkspace,      // 5  [warm]
-  SlideSoul,           // 6  [warm]
-  SlideMemory,         // 7  [dark]
-  SlideUser,           // 8  [warm]
-  SlideAgents,         // 9  [warm]
-  SlideHeartbeat,      // 10 [dark]
-  SlideAppsMelt,       // 11 [warm]
-  SlideAgentIdeas,     // 12 [warm]
-  SlideClawHavoc,      // 13 [dark]
-  SlideSecurityChecklist, // 14 [dark]
-  SlideModels,         // 15 [warm]
-  SlideInstall,        // 16 [warm]
-  SlideFirstAgent,     // 17 [warm]
-  SlideClose,          // 18 [dark]
+  SlideTitle,
+  SlideContents,
+  SlideTimeline,
+  SlideQuoteEmployee,
+  SlideWorkspace,
+  SlideSoul,
+  SlideMemory,
+  SlideUser,
+  SlideAgents,
+  SlideHeartbeat,
+  SlideAppsMelt,
+  SlideAgentIdeas,
+  SlideClawHavoc,
+  SlideSecurityChecklist,
+  SlideModels,
+  SlideClose,
+  SlideInstall,        // appendix
+  SlideFirstAgent,     // appendix
 ]

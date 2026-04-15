@@ -38,7 +38,7 @@ export default function SlideSoul() {
       </a>
 
       <div style={{ marginTop: 28, fontFamily: 'var(--serif)', fontSize: 17, fontStyle: 'italic', color: 'var(--warm-headline)', maxWidth: 500, lineHeight: 1.5 }}>
-        "Peter really crafted a personality that is compelling and interesting, and a lot of current agents don't get this correctly."
+        "Peter [Steinberger] really crafted a personality that is compelling and interesting, and a lot of current agents don't get this correctly."
       </div>
       <div style={{ marginTop: 6, fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--warm-muted)' }}>
         Andrej Karpathy, No Priors
